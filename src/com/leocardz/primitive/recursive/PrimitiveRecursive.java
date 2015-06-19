@@ -6,11 +6,13 @@ package com.leocardz.primitive.recursive;
 public class PrimitiveRecursive {
 
     public static void main(String[] args){
-        int a = sum(10, 9);
-        System.out.print(a);
+        System.out.println("sum(10, 9) = " + sum(10, 9));
+        System.out.println("mult(10, 9) = " + mult(10, 9));
+        System.out.println("pred(10) = " + pred(10));
     }
 
     /**
+     * Sum (Addition)
      *
      * sum(x, y)
      * -------------------
@@ -25,6 +27,43 @@ public class PrimitiveRecursive {
             return x;
         } else {
             return sum(x, y) + 1;
+        }
+    }
+
+    /**
+     * Multiplication
+     *
+     * mult(x, y)
+     * -------------------
+     * mult(x, 0) = x
+     * mult(x, y + 1) = mult(x, y) + x
+     *
+     * */
+    public static int mult(int firstMember, int secondMember) {
+        int x = firstMember;
+        int y = secondMember - 1; // secondMember = y + 1
+        if(y == -1) { // mult(x, 0) = x
+            return 0;
+        } else {
+            return mult(x, y) + x;
+        }
+    }
+
+    /**
+     * Predecessor
+     *
+     * pred(y)
+     * -------------------
+     * pred(0) = 0
+     * pred(y + 1) = y
+     *
+     * */
+    public static int pred(int firstMember) {
+        int y = firstMember - 1; // firstMember = y + 1
+        if(y == -1) { // pred(0) = 0
+            return 0;
+        } else {
+            return y;
         }
     }
 
