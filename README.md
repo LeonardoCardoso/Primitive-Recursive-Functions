@@ -55,3 +55,14 @@ Rules:
 >exp(x, 0) = 1
 >
 >exp(x, y + 1) = mult(exp(x, y), x)
+
+
+Signal (also boolean function)
+----
+Function:
+>sg(x)
+    
+Rules:
+>sg(0) = 0
+>
+>sg(y + 1) = 1

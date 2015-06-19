@@ -11,6 +11,7 @@ public class PrimitiveRecursive {
         System.out.println("pred(10) = " + pred(10));
         System.out.println("sub(10, 9) = " + sub(10, 9));
         System.out.println("exp(10, 3) = " + exp(10, 3));
+        System.out.println("sg(10) = " + sg(10));
     }
 
     /**
@@ -104,6 +105,24 @@ public class PrimitiveRecursive {
             return 1;
         } else {
             return mult(exp(x, y), x);
+        }
+    }
+
+    /**
+     * Signal
+     *
+     * sg(x)
+     * -------------------
+     * sg(0) = 0
+     * sg(y + 1) = 1
+     *
+     * */
+    public static int sg(int firstMember) {
+        int y = firstMember - 1; // firstMember = y + 1
+        if(y == -1) { // sg(0) = 0
+            return 0;
+        } else {
+            return 1;
         }
     }
 
