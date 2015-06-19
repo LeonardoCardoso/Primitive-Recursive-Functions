@@ -10,6 +10,7 @@ public class PrimitiveRecursive {
         System.out.println("mult(10, 9) = " + mult(10, 9));
         System.out.println("pred(10) = " + pred(10));
         System.out.println("sub(10, 9) = " + sub(10, 9));
+        System.out.println("exp(10, 3) = " + exp(10, 3));
     }
 
     /**
@@ -84,6 +85,25 @@ public class PrimitiveRecursive {
             return x;
         } else {
             return pred(sub(x, y));
+        }
+    }
+
+    /**
+     * Exponentiation
+     *
+     * exp(x, y)
+     * -------------------
+     * exp(x, 0) = x
+     * exp(x, y + 1) = pred(sum(x, y))
+     *
+     * */
+    public static int exp(int firstMember, int secondMember) {
+        int x = firstMember;
+        int y = secondMember - 1; // secondMember = y + 1
+        if(y == -1) { // exp(x, 0) = x
+            return 1;
+        } else {
+            return mult(exp(x, y), x);
         }
     }
 

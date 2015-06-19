@@ -44,3 +44,14 @@ Rules:
 >sub(x, 0) = x
 >
 >sub(x, y + 1) = pred(sub(x, y))
+
+
+Exponentiation
+----
+Function:
+>exp(x, y)
+    
+Rules:
+>exp(x, 0) = 1
+>
+>exp(x, y + 1) = mult(exp(x, y), x)
