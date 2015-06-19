@@ -12,6 +12,7 @@ public class PrimitiveRecursive {
         System.out.println("sub(10, 9) = " + sub(10, 9));
         System.out.println("exp(10, 3) = " + exp(10, 3));
         System.out.println("sg(10) = " + sg(10));
+        System.out.println("cosg(10) = " + cosg(10));
     }
 
     /**
@@ -123,6 +124,24 @@ public class PrimitiveRecursive {
             return 0;
         } else {
             return 1;
+        }
+    }
+
+    /**
+     * Signal Complement
+     *
+     * cosg(x)
+     * -------------------
+     * cosg(0) = 1
+     * cosg(y + 1) = 0
+     *
+     * */
+    public static int cosg(int firstMember) {
+        int y = firstMember - 1; // firstMember = y + 1
+        if(y == -1) { // cosg(0) = 0
+            return 1;
+        } else {
+            return 0;
         }
     }
 

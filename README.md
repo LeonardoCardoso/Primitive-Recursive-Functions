@@ -57,7 +57,7 @@ Rules:
 >exp(x, y + 1) = mult(exp(x, y), x)
 
 
-Signal (also boolean function)
+Signal
 ----
 Function:
 >sg(x)
@@ -66,3 +66,14 @@ Rules:
 >sg(0) = 0
 >
 >sg(y + 1) = 1
+
+
+Signal Complement
+----
+Function:
+>cosg(x)
+    
+Rules:
+>cosg(0) = 1
+>
+>cosg(y + 1) = 0
