@@ -33,3 +33,14 @@ Rules:
 >pred(0) = 0
 >
 >pred(y + 1) = y
+
+
+Subtraction
+----
+Function:
+>sub(x, y)
+    
+Rules:
+>sub(x, 0) = x
+>
+>sub(x, y + 1) = pred(sub(x, y))

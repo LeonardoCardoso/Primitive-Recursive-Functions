@@ -9,6 +9,7 @@ public class PrimitiveRecursive {
         System.out.println("sum(10, 9) = " + sum(10, 9));
         System.out.println("mult(10, 9) = " + mult(10, 9));
         System.out.println("pred(10) = " + pred(10));
+        System.out.println("sub(10, 9) = " + sub(10, 9));
     }
 
     /**
@@ -64,6 +65,25 @@ public class PrimitiveRecursive {
             return 0;
         } else {
             return y;
+        }
+    }
+
+    /**
+     * Subtraction
+     *
+     * sub(x, y)
+     * -------------------
+     * sub(x, 0) = x
+     * sub(x, y + 1) = pred(sum(x, y))
+     *
+     * */
+    public static int sub(int firstMember, int secondMember) {
+        int x = firstMember;
+        int y = secondMember - 1; // secondMember = y + 1
+        if(y == -1) { // sub(x, 0) = x
+            return x;
+        } else {
+            return pred(sub(x, y));
         }
     }
 
