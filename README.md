@@ -77,3 +77,25 @@ Rules:
 >cosg(0) = 1
 >
 >cosg(y + 1) = 0
+
+
+Greater Than
+----
+Function:
+>gt(x, y)
+    
+Rules:
+>gt(x, x) = 0
+>
+>gt(x, y) = sg(sub(x, y)
+
+
+Less Than
+----
+Function:
+>lt(x, y)
+    
+Rules:
+>lt(x, x) = 0
+>
+>lt(x, y) = cosg(sub(x, y)
