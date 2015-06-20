@@ -15,11 +15,12 @@ public class PrimitiveRecursive {
         System.out.println("cosg(10) = " + cosg(10));
         System.out.println("gt(10, 9) = " + gt(10, 9));
         System.out.println("lt(10, 9) = " + lt(10, 9));
+        System.out.println("eq(10, 10) = " + eq(10, 10));
     }
 
     /**
      * Sum (Addition)
-     * <p/>
+     *
      * sum(x, y)
      * -------------------
      * sum(x, 0) = x
@@ -37,7 +38,7 @@ public class PrimitiveRecursive {
 
     /**
      * Multiplication
-     * <p/>
+     *
      * mult(x, y)
      * -------------------
      * mult(x, 0) = x
@@ -55,7 +56,7 @@ public class PrimitiveRecursive {
 
     /**
      * Predecessor
-     * <p/>
+     *
      * pred(y)
      * -------------------
      * pred(0) = 0
@@ -72,7 +73,7 @@ public class PrimitiveRecursive {
 
     /**
      * Subtraction
-     * <p/>
+     *
      * sub(x, y)
      * -------------------
      * sub(x, 0) = x
@@ -90,7 +91,7 @@ public class PrimitiveRecursive {
 
     /**
      * Exponentiation
-     * <p/>
+     *
      * exp(x, y)
      * -------------------
      * exp(x, 0) = x
@@ -108,7 +109,7 @@ public class PrimitiveRecursive {
 
     /**
      * Signal
-     * <p/>
+     *
      * sg(x)
      * -------------------
      * sg(0) = 0
@@ -125,7 +126,7 @@ public class PrimitiveRecursive {
 
     /**
      * Signal Complement
-     * <p/>
+     *
      * cosg(x)
      * -------------------
      * cosg(0) = 1
@@ -142,7 +143,7 @@ public class PrimitiveRecursive {
 
     /**
      * Greater than
-     * <p/>
+     *
      * gt(x, y)
      * -------------------
      * gt(x, y) = sg(sub(x, y)
@@ -159,7 +160,7 @@ public class PrimitiveRecursive {
 
     /**
      * Less than
-     * <p/>
+     *
      * lt(x, y)
      * -------------------
      * lt(x, y) = cosg(sub(x, y)
@@ -172,6 +173,19 @@ public class PrimitiveRecursive {
         } else {
             return cosg(sub(x, y));
         }
+    }
+
+    /**
+     * Equal
+     *
+     * eq(x, y)
+     * -------------------
+     * cosg(lt(x, y) + gt(x, y))
+     */
+    public static int eq(int firstMember, int secondMember) {
+        int x = firstMember;
+        int y = secondMember;
+        return cosg(lt(x, y) + gt(x, y));
     }
 
 }

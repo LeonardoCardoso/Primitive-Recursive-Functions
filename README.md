@@ -99,3 +99,12 @@ Rules:
 >lt(x, x) = 0
 >
 >lt(x, y) = cosg(sub(x, y)
+
+
+Equal
+----
+Function:
+>eq(x, y)
+    
+Rules:
+>cosg(lt(x, y) + gt(x, y))
