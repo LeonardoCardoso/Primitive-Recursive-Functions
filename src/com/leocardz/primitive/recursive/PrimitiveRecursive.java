@@ -16,6 +16,7 @@ public class PrimitiveRecursive {
         System.out.println("gt(10, 9) = " + gt(10, 9));
         System.out.println("lt(10, 9) = " + lt(10, 9));
         System.out.println("eq(10, 10) = " + eq(10, 10));
+        System.out.println("diff(10, 9) = " + diff(10, 9));
     }
 
     /**
@@ -186,6 +187,19 @@ public class PrimitiveRecursive {
         int x = firstMember;
         int y = secondMember;
         return cosg(lt(x, y) + gt(x, y));
+    }
+
+    /**
+     * Different
+     *
+     * diff(x, y)
+     * -------------------
+     * cosg(eq(x, y))
+     */
+    public static int diff(int firstMember, int secondMember) {
+        int x = firstMember;
+        int y = secondMember;
+        return cosg(eq(x, y));
     }
 
 }

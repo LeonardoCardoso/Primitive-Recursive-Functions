@@ -108,3 +108,12 @@ Function:
     
 Rules:
 >cosg(lt(x, y) + gt(x, y))
+
+
+Different
+----
+Function:
+>diff(x, y)
+    
+Rules:
+>cosg(eq(x, y))
