@@ -19,7 +19,7 @@ Function:
 >mult(x, y)
     
 Rules:
->mult(x, 0) = x
+>mult(x, 0) = 0
 >
 >mult(x, y + 1) = mult(x, y) + x
 
@@ -117,3 +117,16 @@ Function:
     
 Rules:
 >cosg(eq(x, y))
+
+
+Predicates
+----
+A predicate P defines a function p: N x N x N... x N → {0, 1}, named as characteristic function, which computes the values
+1 (true) ou 0 (false). Thus, the logical operators ¬(not), &or;(or) and &and;(and) are set up as:
+
+
+| predicate     	| interpretation 	|
+|-----------------	|---------------	|
+| cosg(p1)        	| ¬p1           	|
+| mult(p1, p2)    	| p1 ∧ p2       	|
+| sg(sum(p1, p2)) 	| p1 ∨ p2       	|
