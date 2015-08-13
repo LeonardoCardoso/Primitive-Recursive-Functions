@@ -1,4 +1,7 @@
 # Primitive-Recursive-Functions
+
+Developed by <a href='https://github.com/LeonardoCardoso' target='_blank'>@LeonardoCardoso</a>. 
+
 A class with the common Math operations using recursion using Natural Numbers &#8469;.
 
 
