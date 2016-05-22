@@ -134,6 +134,8 @@ A predicate P defines a function p: N x N x N... x N → {0, 1}, named as charac
 | mult(p1, p2)    	| p1 ∧ p2       	|
 | sg(sum(p1, p2)) 	| p1 ∨ p2       	|
 
+## Contact
+Contact me either by Twitter [@leocardz](https://twitter.com/leocardz) or emailing me to [contact@leocardz.com](mailto:contact@leocardz.com).
 
 ## License
 
